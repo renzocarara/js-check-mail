@@ -32,12 +32,19 @@ for (var i = 0; i < users.length; i++) {
         // o impostare la condizione di uscita (user[i] == email) + 1 if fuori dal ciclo
     }
 }
+console.log("found:", found);
 
 // scansione terminata, verifico risultato della ricerca
+// inizio a compilare la pagina HTML
+document.getElementById('email').innerHTML = email; //indirizzo ricercato
+
 if (found) {
     // utente riconosciuto
-    console.log("L'utente risulta registrato");
+    document.getElementById('present').setAttribute("class", "showup");
+    console.log("ramo true");
+
 } else {
     // utente non riconosciuto, riprova o registrati
-    console.log("L'utente non è presente");
+    document.getElementById('missing').setAttribute("class", "showup");
+    console.log("ramo else");
 }
