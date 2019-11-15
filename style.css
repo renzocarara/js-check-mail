@@ -14,6 +14,11 @@ body {
 }
 
 .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: center; */
     color: slategray;
     border: 2px solid red;
     padding: 15px;
@@ -30,7 +35,7 @@ body {
 }
 
 #present, #missing {
-    font-size: 20px;
+    font-size: 28px;
 }
 
 .hidden {
@@ -39,4 +44,13 @@ body {
 
 .showup {
     display: inline-block;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
 }
