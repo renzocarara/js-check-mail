@@ -9,7 +9,19 @@ body {
 }
 
 .container {
+    margin: 0 auto;
     width: 80%;
+}
+
+.panel {
+    color: slategray;
+    border: 2px solid red;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 30px auto;
+    width: 320px;
+    height: 400px;
+    background-color: ghostwhite;
 }
 
 #email {
