@@ -6,6 +6,7 @@
 
 body {
     background-color: lightgray;
+    font-family: sans-serif;
 }
 
 .container {
@@ -33,11 +34,17 @@ p {
 }
 
 #email {
-    font-size: 18px;
+    /* spezzo l'indirizzo mail, se troppo lungo */
+    word-break: break-all;
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
     font-style: italic;
 }
 
 #present, #missing {
+    font-size: bold;
+    color: black;
     font-size: 28px;
 }
 
