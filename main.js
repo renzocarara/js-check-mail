@@ -22,10 +22,8 @@ var email = prompt("Inserisci il tuo indirizzo e-mail: ", "nome.cognome@domino.i
 
 // scandisco l'array per cercare l'input dell'utente
 for (var i = 0; i < users.length; i++) {
-    // console.log("i=", i, "\nusers[i]=", users[i]);
     if (users[i] == email) {
         found = true;
-        // console.log("i=", i, "\n users[i]=", users[i]);
         // non proprio efficiente, continua a ciclare anche se ha già trovato l'elemento cercato
         // ci vorrebbe un ciclo while..,
         // o un break??,
@@ -41,10 +39,8 @@ document.getElementById('email').innerHTML = email; //indirizzo ricercato
 if (found) {
     // utente riconosciuto
     document.getElementById('present').setAttribute("class", "showup");
-    console.log("ramo true");
 
 } else {
-    // utente non riconosciuto, riprova o registrati
+    // utente non riconosciuto
     document.getElementById('missing').setAttribute("class", "showup");
-    console.log("ramo else");
 }
