@@ -21,18 +21,18 @@ var found = false;
 var email = prompt("Inserisci il tuo indirizzo e-mail: ", "nome.cognome@domino.it");
 
 // scandisco l'array per cercare l'input dell'utente
-for (var i = 0; i < users.length; i++) {
-    if (users[i] == email) {
-        found = true;
-        // non proprio efficiente, continua a ciclare anche se ha già trovato l'elemento cercato
-        // ci vorrebbe un ciclo while..,
-        // o un break??,
-        // o impostare la condizione di uscita (user[i] == email) + 1 if fuori dal ciclo
-    }
+// console.log("cerco: ", email);
+for (var i = 0;
+    (i < users.length) && (users[i] != email); i++) {
+    // esco dal ciclo for quando ho scandito tutto l'array o se trovo l'elemento cercato
+    // console.log("users[", i, "] = ", users[i]);
 }
-console.log("found:", found);
-
 // scansione terminata, verifico risultato della ricerca
+if (users[i] == email) {
+    found = true;
+}
+// console.log("found:", found);
+
 // inizio a compilare la pagina HTML
 document.getElementById('email').innerHTML = email; //indirizzo ricercato
 
